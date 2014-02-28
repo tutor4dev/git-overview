@@ -1,0 +1,447 @@
+<html>
+	<head>
+		<title>tutor4dev - Workshop</title>
+
+		<meta http-equiv="Content-Language" content="th">
+	<meta http-equiv="content-Type" content="text/html; charset=utf-8"> 
+
+		<link rel="stylesheet" href="css/default.css">
+		<!--<link rel="stylesheet" href="css/font.css">-->
+
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Archivo+Black' rel='stylesheet' type='text/css'>
+
+		<script src="js/highlight.pack.js"></script>
+		
+		<script>
+			hljs.configure({
+  				languages: ['bash']
+			})
+
+			hljs.initHighlightingOnLoad();
+		</script>
+	</head>
+	<body>
+		<h1 id="getting-started-git-and-github">Getting Started - Git and GitHub</h1>
+<hr>
+<h2 id="chapter-1-introduction">Chapter 1 - Introduction</h2>
+<h3 id="git">Git</h3>
+<p><img src="http://git-scm.com/images/guis/sourcetree@2x.png" alt=""></p>
+<p><a href="http://git-scm.com">Git</a> เป็น Distributed Version Control System รองรับการทำงานทั้งแบบ Online และ Offline</p>
+<h3 id="github">GitHub</h3>
+<p><img src="http://haacked.com/images/haacked_com/Windows-Live-Writer/Update-NuGet-Docs-in-the-Browser-with-Gi_D96F/nuget-docs-github_2.png" alt=""></p>
+<p><a href="https://github.com">GitHub</a> เป็น Project Hosting Service สำหรับจัดเก็บ Repository ที่ใช้ Git เป็น VCS รองรับฟังชั่นให้นักพัฒนาที่ไม่ใช่เจ้าของ Repository สามารถเข้ามามีส่วนร่วมในการร่วมพัฒนาโปรเจค โปรเจคที่มีชื่อเสียงแทบทั้งหมดเช่น jQuery, Bootstrap, Laravel, pallarax, etc ต่างก็ใช้ GitHub ในการจัดเก็บ Repository แทบทั้งสิ้น</p>
+<h3 id="gist">Gist</h3>
+<p><img src="https://github-images.s3.amazonaws.com/help/gist/gist_history.png" alt=""></p>
+<p><a href="https://gist.github.com">Gist</a> เป็น Service ภายใต้ <a href="https://github.com">GitHub</a> ให้บริการแชร์ Code Snippet สนับสนุน Version Control System และมีฟังชั่นรองรับให้นักพัฒนาที่ไม่ใช่เจ้าของ Code Snippest สามารถมีส่วนร่วมในการแก้ไขเพิ่มเติมเพื่อให้ Code Snippest ดังกล่าวมีความสมบูรณ์ยิ่งขึ้น</p>
+<h4 id="-vcs">วัตถุประสงค์ในการใช้ VCS</h4>
+<ul>
+<li>เพื่อพัฒนาโปรเจคอย่างมีระบบ</li>
+<li>VCS ช่วยในการ Track การพัฒนาโปรเจค</li>
+<li>VCS ช่วยในการ Track Who, What, When, Where, Why</li>
+<li>นำ History จากการ Track มาใช้ในการบริหารจัดการโปรเจค</li>
+<li>สำรองข้อมูล</li>
+</ul>
+<h4 id="-">กิจวัตรประจำวันของนักพัฒนา</h4>
+<ul>
+<li>สร้างโปรเจค</li>
+<li>แก้ไข</li>
+<li>จัดเก็บ</li>
+<li>แก้ไข &amp; จัดเก็บ</li>
+<li>แก้ไข &amp; จัดเก็บ</li>
+<li>รีวิว, แก้บั๊ก</li>
+<li>แก้ไข &amp; จัดเก็บ</li>
+</ul>
+<h4 id="-git">จุดเด่นของ Git</h4>
+<ul>
+<li>ฟรี</li>
+<li>รองรับทุกแพลตฟอร์ม</li>
+<li>รองรับทุกภาษาในการพัฒนาโปรแกรม</li>
+<li>เร็ว, เล็ก, ไม่กินทรัพยากรของระบบ</li>
+<li>ทำงานได้ทั้งแบบ Offline/Online (Distrubuted)</li>
+<li>เป็นที่นิยม<strong>ที่สุด</strong></li>
+</ul>
+<h4 id="-git-">ใครใช้ Git บ้าง ?</h4>
+<ul>
+<li>Linux Kernel</li>
+<li>Laravel</li>
+<li>jQuery</li>
+<li>Twitter Bootstrap</li>
+<li>paralax</li>
+<li>node.js</li>
+<li>ฯลฯ</li>
+</ul>
+<h3 id="git-gui-tool">Git GUI Tool</h3>
+<h4 id="sourcetree-for-osx">SourceTree for OSX</h4>
+<p><img src="http://git-scm.com/images/guis/sourcetree@2x.png" alt=""></p>
+<h4 id="github-for-windows">GitHub for Windows</h4>
+<p><img src="http://windows.github.com/images/repository.png" alt=""></p>
+<h4 id="giggle-for-ubuntu">Giggle for Ubuntu</h4>
+<p><img src="http://tombuntu.com/wp-content/uploads/2011/11/gitg.jpg" alt=""></p>
+<h3 id="ide-plugins">IDE Plugins</h3>
+<h4 id="plugin-netbeans-ide">Plugin สำหรับ NetBeans IDE</h4>
+<p><img src="https://netbeans.org/images_www/articles/71/ide/git/initialize-git-repo-small.png" alt=""></p>
+<h5 id="plugin-eclipse">Plugin สำหรับ Eclipse</h5>
+<p><img src="https://www.eclipse.org/egit/welcome.png" alt=""></p>
+<h2 id="chapter-2-git-installation-config">Chapter 2 - Git Installation &amp; Config</h2>
+<h3 id="git-installation">Git Installation</h3>
+<h4 id="requirement">Requirement</h4>
+<ul>
+<li>ติดตั้ง <em>Git SCM</em></li>
+<li>สมัครบัญชี <a href="github.com">github.com</a></li>
+</ul>
+<h4 id="-git-scm">ติดตั้ง Git SCM</h4>
+<ol>
+<li><a href="http://git-scm.com/downloads">ดาวน์โหลด <em>Git</em></a></li>
+<li>ติดตั้ง <em>Git</em></li>
+<li>เพิ่ม <em>PATH</em> ให้กับ <em>Environment Variables</em> </li>
+<li>เปิดใช้งาน <em>Git Bash</em> หรือ <em>Terminal</em></li>
+<li>ใช้คำสั่ง <code>git --version</code></li>
+</ol>
+<h3 id="git-config">Git Config</h3>
+<h4 id="-">ตั้งค่าข้อมูลของนักพัฒนา</h4>
+<pre><code>git config --global user.name &quot;Kongthap Thammachat&quot;
+git config --global user-email tutor4dev@gmail.com
+</code></pre><h4 id="-ui">ตั้งค่าของ UI</h4>
+<pre><code>git config --global color.ui auto
+git config --global color.branch auto
+git config --global color.diff auto
+git config --global color.interactive auto
+git config --global color.status auto
+</code></pre><h4 id="-">แสดงข้อมูลการตั้งค่า</h4>
+<pre><code>git config --list
+</code></pre><h4 id="-">ลบข้อมูลในการตั้งค่า</h4>
+<pre><code>git config --global unset-all users.name
+</code></pre><h3 id="-github">สมัครบัญชี GitHub</h3>
+<h2 id="chapter-3-git-">Chapter 3 - ใช้งาน Git ขั้นฐาน</h2>
+<h3 id="-git-">ติดตั้ง Git ให้กับโปรเจค</h3>
+<p><img src="http://guides.beanstalkapp.com/version-control/git-on-windows/git-bash.png" alt=""></p>
+<ol>
+<li>สร้างแฟ้มให้กับโปรเจคชื่อ <em>Git-Tutorial</em> โดยใช้ <em>Windows Explorer</em></li>
+<li><em>คลิ๊กขวา</em> ที่ <em>Git-Tutorial</em> แล้วเลือก <em>Git Bash</em></li>
+<li>พิมพ์คำสั่ง <code>git init</code></li>
+</ol>
+<blockquote>
+<p>หากใช้โปรแกรม <em>Windows Explorer</em> เปิดดูไฟล์ใน <em>Git-Tutorial </em> จะมองเห็นแฟ้มชื่อ <em>.git</em> โดย Git ใช้แฟ้มดังกล่าวในการเก็บข้อมูลทั้งหมดของ Git</p>
+</blockquote>
+<h3 id="-git">ใช้งาน Git</h3>
+<h4 id="first-commit-git">First Commit กับ Git</h4>
+<ol>
+<li>เพิ่มไฟล์ <em>index.html</em> ให้กับแฟ้ม <em>Git-Tutorial</em></li>
+<li>ใช้คำสั่ง <code>git status</code></li>
+<li>ใช้คำสั่ง <code>git add index.html</code></li>
+<li>ใช้คำสั่ง <code>git status</code></li>
+<li>ใช้คำสั่ง <code>git commit -m &quot;First commit&quot;</code></li>
+</ol>
+<h4 id="-commit-">แก้ไขโปรเจค และ Commit เพิ่มเติม</h4>
+<ol>
+<li>แก้ไขไฟล์ <em>index.html</em></li>
+<li>เพิ่มไฟล์ <em>about.html</em> ให้กับแฟ้ม <em>Git-Tutorial</em></li>
+<li>ใช้คำสั่ง <code>git status</code></li>
+<li>ใช้คำสั่ง <code>git add index.html about.html</code></li>
+<li>ใช้คำสั่ง <code>git status</code></li>
+<li>ใช้คำสั่ง <code>git commit -m &quot;Edit and add new file&quot;</code></li>
+</ol>
+<h4 id="-git-log">คำสั่ง git log</h4>
+<p>ใช้ในการเรียกดู History ของการ Commit</p>
+<pre><code>git log
+#หรือ
+git log --oneline
+</code></pre><h4 id="-git">วงจรการใช้งาน Git</h4>
+<p><img src="http://graph1zzlle.github.com/images/posts/git-commit-workflow.png" alt=""></p>
+<ol>
+<li>สร้าง/แก้ไข/ลบ ไฟล์</li>
+<li><em>add</em> การเปลี่ยนแปลงเข้าสู่ <em>staging area</em></li>
+<li><em>commit</em> การเปลี่ยนแปลง</li>
+</ol>
+<h4 id="git-objects">Git Objects</h4>
+<p><img src="http://www.pointsoftware.ch/wp-content/uploads/2012/07/18333fig0301-tn.png" alt=""></p>
+<ol>
+<li>Commit Object</li>
+<li>Tree Object</li>
+<li>BLOB Object</li>
+<li>Pointer</li>
+</ol>
+<h3 id="upload-github-com">Upload โปรเจคไปยัง GitHub.com</h3>
+<h4 id="-github-com">สมัครบัญชี GitHub.com</h4>
+<p><img src="http://orm-chimera-prod.s3.amazonaws.com/1234000001491/images/tutorial_github_signup.png" alt=""></p>
+<p>ดู Demo จากผู้บรรยาย</p>
+<h4 id="-repo-github-com">สร้าง Repo ใน GitHub.com</h4>
+<p><img src="https://github-images.s3.amazonaws.com/help/bootcamp/bootcamp_2_repoinfo.png" alt=""></p>
+<p>ดู Demo จากผู้บรรยาย</p>
+<h4 id="upload-">Upload โปรเจค</h4>
+<pre><code>#add ข้อมูลของ Repo เข้าตัวแปรชื่อ origin
+git remote add origin https://github.com/user/repo_name.git
+
+#Upload โปรเจคไปยัง GitHub.com
+git push -u origin master    
+</code></pre><h3 id="-git">คำสั่งพื้นฐานอื่นๆ ของ Git</h3>
+<h4 id="-git-tag">คำสั่ง git tag</h4>
+<p>ใช้ในการกำหนดเลขเวอร์ชั่นเพื่ออ้างอิง Commit</p>
+<pre><code>#สร้าง tag ให้กับ Commit ปัจจุบัน
+git tag 0.9.9
+#สร้าง tag ให้กับ Commit ที่ต้องการ
+git tag @hash
+</code></pre><h4 id="-git-diff">คำสั่ง git diff</h4>
+<p>ใช้ในการเปรียบเทียบความแตกต่างระหว่าง Commit</p>
+<pre><code>#เปรียบเทียบปัจจบันกับการ Commit ล่าสุด
+git diff
+
+#เปรียบเทียบเฉพาะไฟล์ที่กำหนด
+git diff filename
+
+#เปรียบเทียบระหว่าง Commit
+git diff @hash1 @hash2
+
+#เปรียบเทียบระหว่าง Commit เฉพาะไฟล์ที่กำหนด
+git diff @hash1 @hash2 filename
+</code></pre><h4 id="-head-pointer-commit-">เลื่อน HEAD Pointer ไปยัง Commit ที่ต้องการ</h4>
+<pre><code>#เลื่อน HEAD ไปยัง Commit ที่ต้องการ
+git checkout @hash
+#เลื่อน HEAD กลับมายัง Commit ล่าสุด
+git checkout master
+
+#เลื่อน HEAD ไปยัง tag ที่ต้องการ
+git checkout tag#
+#เลื่อน HEAD กลับมายัง Commit ล่าสุด
+git checkout master
+</code></pre><h4 id="-">ลบไฟล์ออกจากโปรเจค</h4>
+<pre><code>#ลบไฟล์
+git rm filename
+#Commit
+git commit -m &quot;Delete filename&quot;
+</code></pre><h4 id="-">เปลี่ยนชื่อ/ย้ายไฟล์ในโปรเจค</h4>
+<pre><code>#เปลี่ยนชื่อไฟล์
+git mv filename new_filename
+#Commit
+git commit -m &quot;Rename filename to new_filename&quot;
+</code></pre><h4 id="-gitignore">.gitignore</h4>
+<pre><code>#สร้างไฟล์ .gitignore
+touch .gitignore
+#เพิ่มชื่อไไฟล์หรือแฟ้มที่ไม่ต้องการให้ Git ทำการ Track
+
+#Stage ไฟล์
+git add .gitignore
+#Commit
+git commit -m &quot;Add .gitignore&quot;
+</code></pre><h4 id="-commit-unstaged-">ยกเลิกก่อนการ Commit (Unstaged)</h4>
+<p>เป็นคำสั่ง<strong><em>อันตราย</em></strong> เพราะ Git จะยกเลิกการแก้ไขไฟล์ทั้งหมด</p>
+<pre><code>#ยกเลิกทั้งหมด
+git checkout .
+
+#ยกเลิกเฉพาะไฟล์ที่กำหนด
+git checkout -- filename
+</code></pre><h4 id="-commit">ยกเลิกหลังจากการ Commit</h4>
+<pre><code>#ยกเลิก Commit โดยเก็บข้อมูล
+git reset --mixed HEAD^
+
+#ยกเลิก Commit โดยทิ้งข้อมูล (คำสั่งอันตราย)
+git reset --hard HEAD^
+</code></pre><h2 id="chapter-4-branch-">Chapter 4 - แตกสาขาการพัฒนา (Branch)</h2>
+<p>Branch คือ Separate Workspace สำหรับการพัฒนาโปรเจค</p>
+<h3 id="-branch-">วัตถุประสงค์ของการใช้งาน Branch ?</h3>
+<ul>
+<li>แก้ไขบั๊กของโปรเจค</li>
+<li>ทดลองคุณสมบัติใหม่ๆ ให้กับโปรเจค</li>
+<li>แยกเวอร์ชั่น <em>dev</em> ออกจาก <em>stable</em> เวอร์ชั่น</li>
+<li>พัฒนาโปรเจคในแบบทีม</li>
+</ul>
+<h3 id="-branch-">คำสั่ง Branch พื้นฐาน</h3>
+<h4 id="-branch-">แสดง Branch ทั้งหมด</h4>
+<pre><code>#แสดงเฉพาะ Local
+git branch
+
+#แสดงทั้ง Local และ Remote
+git branch -v
+</code></pre><h4 id="-branch-">สร้าง Branch ใหม่</h4>
+<pre><code>git branch new_branch_name
+</code></pre><h4 id="-branch">สลับใช้งาน Branch</h4>
+<pre><code>#สลับใช้งาน Branch ใหม่
+git checkout new_branch_name
+
+#สลับกลับมาใช้งาน Branch หลัก
+git checkout master
+</code></pre><h4 id="-pointer">ทำความเข้าใจเรื่อง Pointer</h4>
+<ol>
+<li>HEAD</li>
+<li>master</li>
+<li>branch_name</li>
+<li>origin/master</li>
+</ol>
+<h5 id="-1-branch-master-">ภาพตัวอย่างโปรเจคที่มี 1 Branch (master)</h5>
+<p><img src="http://git-scm.com/figures/18333fig0303-tn.png" alt=""></p>
+<h5 id="-2-branch-master-testing-">ภาพตัวอย่างโปรเจคที่มี 2 Branch (master, testing)</h5>
+<p><img src="http://git-scm.com/figures/18333fig0308-tn.png" alt=""></p>
+<h4 id="-branch">เปรียบความแตกต่างระหว่าง Branch</h4>
+<pre><code>#เปรียบเทียบความแตกต่างทั้งหมด
+git diff master branch_name
+
+#เปรียบเทียบความแตกต่างเฉพาะไฟล์ที่กำหนด
+git diff master branch_name filename
+</code></pre><h4 id="-branch">ลบ Branch</h4>
+<pre><code>git branch -d branch_name
+</code></pre><h3 id="-merge">การ Merge</h3>
+<h4 id="-merge">คำสั่งในการ Merge</h4>
+<pre><code>#เปลี่ยนมาใช้งาน master
+git checkout master
+
+#Merge branch_name มารวมกับ master
+git merge branch_name
+
+#ลบ branch_name
+git branch -d branch_name
+</code></pre><h4 id="-git-">การใช้ Git ในโปรเจคจริง</h4>
+<p><img src="http://catalint.ro/media/git-workflow-release-cycle-4maintenance.png" alt=""></p>
+<h1 id="medern-development-tools">Medern Development Tools</h1>
+<hr>
+<h2 id="chapter-1-bower">Chapter 1 - bower</h2>
+<p><img src="http://www.boxyapp.com/wp-content/uploads/2013/04/bower.jpg" alt=""></p>
+<p><a href="http://bower.io/">bower</a> เป็น Package Manager ที่ใช้สำหรับติดตั้ง Front-End Library ต่างๆ เช่น</p>
+<ul>
+<li>jQuery</li>
+<li>Twitter Bootstrap</li>
+<li>Angular.js</li>
+<li>parallax</li>
+<li>font-awesome</li>
+<li>etc.</li>
+</ul>
+<h3 id="bower-requirements">bower Requirements</h3>
+<ul>
+<li>npm</li>
+<li>git</li>
+</ul>
+<h3 id="-bower">ติดตั้ง bower</h3>
+<h4 id="-bower">ติดตั้ง bower</h4>
+<pre><code>npm install -g bower
+</code></pre><h4 id="-bower">ทดสอบ bower</h4>
+<pre><code>#เวอร์ชั่น
+bower --version
+
+#แสดงคำสั่งทั้งหมด
+bower --help
+</code></pre><h3 id="-bower">ใช้งาน bower</h3>
+<h4 id="-bower-json">สร้างไฟล์ bower.json</h4>
+<pre><code>bower init
+</code></pre><h4 id="-package">ค้นหา Package</h4>
+<pre><code>bower search what_to_search
+</code></pre><h4 id="-package">ติดตั้ง Package</h4>
+<pre><code>bower install package_name
+
+#ติดตั้ง Bootstrap
+bower install bootstrap --save-dev
+
+#ติดตั้ง Font Awesome
+bower install font-awesome --save-dev
+
+#ติดตั้ง jQuery โดยการกำหนดเวอร์ชั่น
+bower install jquery#1.1 --save-dev
+bower install jquery#2 --save-dev
+</code></pre><h4 id="-package-">แสดง Package ที่ถูกติดตั้งแล้ว</h4>
+<pre><code>bower list
+</code></pre><h4 id="update-package-">Update Package เป็นเวอร์ชั่นล่าสุด</h4>
+<pre><code>bower update
+</code></pre><h4 id="-">ถอนการติดตั้ง</h4>
+<pre><code>bower uninstall package_name --save-dev
+</code></pre><h2 id="chapter-2-grunt-js">Chapter 2 - Grunt.js</h2>
+<p><img src="http://jordanforeman.com/wp-content/uploads/2014/02/grunt1.jpg" alt=""></p>
+<p><a href="http://gruntjs.com/">Grunt.js</a> เป็น Automation หรือ Task Runner ที่ช่วยทำงานที่ซ้ำๆ แทนนักพัฒนา เช่น</p>
+<ul>
+<li>LiveReload</li>
+<li>คอมไพล์ .less, .scss</li>
+<li>คอมไพล์ .coffee</li>
+<li>Auto Prefixer</li>
+<li>ย่อขนาดไฟล์ .js (Uglify)</li>
+<li>ย่อขนาดไฟล์ .css (Minify)</li>
+<li>ย่อขนาดไฟล์รูปภาพ</li>
+<li>Copy ไฟล์</li>
+<li>ต่อไฟล์ (Concat)</li>
+<li>etc.</li>
+</ul>
+<h3 id="grunt-js-requirements">Grunt.js Requirements</h3>
+<ul>
+<li>npm</li>
+</ul>
+<h3 id="-grunt-js">ติดตั้ง Grunt.js</h3>
+<h4 id="-grunt-cli">ติดตั้ง Grunt CLI</h4>
+<pre><code>npm install -g grunt-cli
+</code></pre><h4 id="-grunt-cli">ทดสอบ Grunt CLI</h4>
+<pre><code>grunt --version
+</code></pre><h4 id="-grunt-">ติดตั้ง Grunt ให้กับโปรเจค</h4>
+<pre><code>npm install grunt --save-dev
+</code></pre><h3 id="grunt-js-plugins">Grunt.js Plugins</h3>
+<p><a href="http://gruntjs.com/plugins">Plugins</a> สำหรับ Grunt.js</p>
+<h4 id="-plugins-">ติดตั้ง Plugins ให้กับโปรเจค</h4>
+<pre><code>npm install grunt_plugin_name --save-dev
+</code></pre><h3 id="-grunt-js">ใช้งาน Grunt.js</h3>
+<h4 id="task-copy">Task copy</h4>
+<ol>
+<li>สร้างแฟ้มชื่อ <em>Grunt-Copy</em></li>
+<li>เปิดโปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>เปลี่ยนไดเร็คทอรี่เป็น <em>Grunt-Copy</em></li>
+<li>ใช้ำสั่ง <code>bower install bootstrap</code> ที่โปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>ใช้คำสั่ง <code>npm init</code> ที่โปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>กด <kbd>Enter</kbd> จนกระทั่งขึ้น <em>Prompt</em></li>
+<li>ใช้คำสั่ง <code>npm install grunt --save-dev</code> ที่โปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>ใช้คำสั่ง <code>npm install grunt-contrib-copy --save-dev</code> ที่โปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>Download <a href="https://gist.github.com/tutor4dev/9183159">Gruntfile.js</a> ไว้ที่แฟ้ม <em>Grunt-Copy</em></li>
+<li>ใช้คำสั่ง <code>grunt copy</code> ที่โปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>สังเกตุการเปลี่ยนแปลงในแฟ้ม <em>Grunt-Copy</em></li>
+</ol>
+<h4 id="task-auto-prefixer">Task Auto Prefixer</h4>
+<ol>
+<li>สร้างแฟ้มชื่อ <em>Grunt-Autoprefix</em></li>
+<li>เปิดโปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>เปลี่ยนไดเร็คทอรี่เป็น <em>Grunt-Autoprefix</em></li>
+<li>ใช้คำสั่ง <code>npm init</code> ที่โปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>กด <kbd>Enter</kbd> จนกระทั่งขึ้น <em>Prompt</em></li>
+<li>ใช้คำสั่ง <code>npm install grunt --save-dev</code> ที่โปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>ใช้คำสั่ง <code>npm install grunt-autoprefixer --save-dev</code> ที่โปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>Download <a href="https://gist.github.com/tutor4dev/9203696">Gruntfile.js</a> ไว้ที่แฟ้ม <em>Grunt-Autoprefix</em></li>
+<li>Download <a href="https://gist.github.com/tutor4dev/9203698">default.css</a> ไว้ที่แฟ้ม <em>Grunt-Autoprefix/css</em></li>
+<li>ใช้คำสั่ง <code>grunt autoprefixer</code> ที่โปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>สังเกตุการเปลี่ยนแปลงในแฟ้ม <em>Grunt-Autoprefix/css</em></li>
+</ol>
+<h4 id="task-connect-watch-livereload">Task connect, watch และ LiveReload</h4>
+<ol>
+<li>สร้างแฟ้มชื่อ Grunt-LiveReload</li>
+<li>เปิดโปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>เปลี่ยนไดเร็คทอรี่เป็น <em>Grunt-LiveReload</em></li>
+<li>สร้างไฟล์ <em>index.html</em> พร้อมข้อมูล</li>
+<li>ใช้คำสั่ง <code>npm init</code> ที่โปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>กด <kbd>Enter</kbd> จนกระทั่งขึ้น <em>Prompt</em> </li>
+<li>ใช้คำสั่ง <code>npm install grunt --save-dev</code> ที่โปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>ใช้คำสั่ง <code>npm install grunt-contrib-connect --save-dev</code></li>
+<li>ใช้คำสั่ง <code>npm install grunt-contrib-watch --save-dev</code> ที่โปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>Download <a href="https://gist.github.com/tutor4dev/9183136">Gruntfile.js</a> ไว้ที่แฟ้ม <em>Grunt-LiveReload</em></li>
+<li>Download <strong>Extension</strong> สำหรับ <a href="https://addons.mozilla.org/en-US/firefox/addon/livereload">Firefox</a>, <a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en">Chrome</a></li>
+<li>ใช้คำสั่ง <code>grunt serve</code> ที่โปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>ใช้เว็บบราวเซอร์เปิด URL <em>localhost:8000</em></li>
+<li>แก้ไขไฟล์ <em>index.html</em> และ จัดเก็บการเปลี่ยนแปลง</li>
+<li>สังเกตุการเปลี่ยนแปลงที่เว็บบราวเซอร์</li>
+<li>ยกเลิก <em>grunt serve</em> โดยการกด <kbd>Ctrl</kbd>+<kbd>C</kbd></li>
+</ol>
+<h4 id="task-uglify-cssmin-imagemin">Task uglify, cssmin, imagemin</h4>
+<ol>
+<li>สร้างแฟ้มชื่อ <em>Grunt-Minify</em></li>
+<li>เปิดโปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>เปลี่ยนไดเร็คทอรี่เป็น <em>Grunt-Minify</em></li>
+<li>ใช้คำสั่ง <code>npm init</code> ที่โปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>กด <kbd>Enter</kbd> จนกระทั่งขึ้น <em>Prompt</em></li>
+<li>ใช้คำสั่ง <code>npm install grunt --save-dev</code> ที่โปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>ใช้คำสั่ง <code>npm install grunt-contrib-uglify --save-dev</code> ที่โปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>ใช้คำสั่ง <code>npm install grunt-contrib-cssmin --save-dev</code> ที่โปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>ใช้คำสั่ง <code>npm install grunt-contrib-image --save-dev</code> ที่โปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>Download <a href="https://gist.github.com/tutor4dev/9183303">Gruntfile.js</a> ไว้ที่แฟ้ม <em>Grunt-Minify</em></li>
+<li>Download <a href="https://gist.github.com/tutor4dev/9203084">bootstrap.js</a> ไว้ที่แฟ้ม <em>Grunt-Minify/js</em></li>
+<li>ใช้คำสั่ง <code>grunt uglify</code> ที่โปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>สังเกตุการเปลี่ยนแปลงในแฟ้ม <em>Grunt-Minify/js</em></li>
+<li>Download <a href="https://gist.github.com/tutor4dev/9203092">bootstrap.css</a> ไว้ที่แฟ้ม <em>Grunt-Minify/css</em></li>
+<li>ใช้คำสั่ง <code>grunt uglify</code> ที่โปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>สังเกตุการเปลี่ยนแปลงในแฟ้ม <em>Grunt-Minify/css</em></li>
+<li>ค้นหาไฟล์รูปภาพและจัดเก็บไว้ที่แฟ้ม <em>Grunt-Minify/images</em></li>
+<li>ใช้คำสั่ง <code>grunt imagemin</code> ที่โปรแกรม <strong>Command Promp</strong> หรือ <strong>Terminal</strong></li>
+<li>สังเกตุการเปลี่ยนแปลงในแฟ้ม <em>Grunt-Minify/images</em></li>
+</ol>
+
+	</body>
+</html>

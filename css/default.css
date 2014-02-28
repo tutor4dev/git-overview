@@ -1,0 +1,317 @@
+@import url("font.css");
+
+html {
+	/*background: #EDF0F5;*/
+    background: #3b5998;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 1024px;
+    height: auto;
+    min-height: 100%;
+    background: white;
+    font-family: "THSarabunNew", sans-serif;
+    color: #555555;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+}
+
+h1 {
+    font-family: "Archivo Black", "THSarabunNew", sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: "Archivo Black", "THSarabunNew", sans-serif;
+    border: solid 3px;
+    border-color: #67c2f0;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    display: table;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+h3 {
+    font-family: "Ubuntu", "THSarabunNew", sans-serif;
+    border: solid 2px;
+    border-color: #a1f07b;
+    display: table;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+h4 {
+    font-family: "Ubuntu", "THSarabunNew", sans-serif;
+    border: solid 2px;
+    border-color: #eeeeee;
+    display: table;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px; 
+}
+
+hr {
+    color: #eeeeee;
+    background-color: #eeeeee;
+    height: 2px;
+    border: 0;
+}
+
+ul {
+    list-style-type: square;   
+}
+
+a {
+    font-weight: bold;
+    color: #0e90d2;
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: bold;
+    color: #0e90d2;
+    text-decoration: underline;
+}
+
+em {
+    font-style: normal;
+    font-weight: bold;
+	color: black;
+}
+
+strong {
+    font-style: underline;
+    font-weight: bold;
+    color: black;
+}
+
+strong em {
+    font-style: normal;
+    font-weight: bold;
+    color: #dd514c;
+}
+
+code {
+    font-family: "BPmono", sans-serif;;
+    color: white;
+    background: #555555;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+pre code {
+    font-family: "BPMono", sans-serif;
+    font-size: 1.1em;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+kbd {
+    padding: 0.1em 0.6em;
+    border: 1px solid #ccc;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 0 0.1em;
+    text-shadow: 0 1px 0 #fff;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+kbd .flat {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #dddddd;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#dddddd));
+    background-image: -webkit-linear-gradient(#f1f1f1, #dddddd);
+    background-image: -moz-linear-gradient(#f1f1f1, #dddddd);
+    background-image: -o-linear-gradient(#f1f1f1, #dddddd);
+    background-image: linear-gradient(#f1f1f1, #dddddd);
+    background-repeat: repeat-x;
+    border-color: #dddddd #cccccc #cccccc #dddddd;
+    -webkit-border-image: none;
+    -moz-border-image: none;
+    -o-border-image: none;
+    border-image: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+img {
+    max-width: 100%
+}
+
+.hljs {
+  display: block;
+  padding: 1em;
+  width: 600px;
+  background: #23241f;
+}
+
+.hljs,
+.hljs-tag,
+.css .hljs-rules,
+.css .hljs-value,
+.css .hljs-function
+.hljs-preprocessor,
+.hljs-pragma {
+  color: #f8f8f2;
+}
+
+.hljs-strongemphasis,
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-blockquote,
+.hljs-horizontal_rule,
+.hljs-number,
+.hljs-regexp,
+.alias .hljs-keyword,
+.hljs-literal,
+.hljs-hexcolor {
+  color: #ae81ff;
+}
+
+.hljs-tag .hljs-value,
+.hljs-code,
+.hljs-title,
+.css .hljs-class,
+.hljs-class .hljs-title:last-child {
+  color: #a6e22e;
+}
+
+.hljs-link_url {
+  font-size: 80%;
+}
+
+.hljs-strong,
+.hljs-strongemphasis {
+  font-weight: bold;
+}
+
+.hljs-emphasis,
+.hljs-strongemphasis,
+.hljs-class .hljs-title:last-child {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-function,
+.hljs-change,
+.hljs-winutils,
+.hljs-flow,
+.lisp .hljs-title,
+.clojure .hljs-built_in,
+.nginx .hljs-title,
+.tex .hljs-special,
+.hljs-header,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-symbol .hljs-string,
+.hljs-tag .hljs-title,
+.hljs-value,
+.alias .hljs-keyword:first-child,
+.css .hljs-tag,
+.css .unit,
+.css .hljs-important {
+  color: #F92672;
+}
+
+.hljs-function .hljs-keyword,
+.hljs-class .hljs-keyword:first-child,
+.hljs-constant,
+.css .hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-variable,
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.css .hljs-id,
+.hljs-subst,
+.haskell .hljs-type,
+.ruby .hljs-class .hljs-parent,
+.hljs-built_in,
+.sql .hljs-aggregate,
+.django .hljs-template_tag,
+.django .hljs-variable,
+.smalltalk .hljs-class,
+.django .hljs-filter .hljs-argument,
+.smalltalk .hljs-localvars,
+.smalltalk .hljs-array,
+.hljs-attr_selector,
+.hljs-pseudo,
+.hljs-addition,
+.hljs-stream,
+.hljs-envvar,
+.apache .hljs-tag,
+.apache .hljs-cbracket,
+.tex .hljs-command,
+.hljs-prompt,
+.hljs-link_label,
+.hljs-link_url {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-javadoc,
+.java .hljs-annotation,
+.python .hljs-decorator,
+.hljs-template_comment,
+.hljs-pi,
+.hljs-doctype,
+.hljs-deletion,
+.hljs-shebang,
+.apache .hljs-sqbracket,
+.tex .hljs-formula {
+  color: #75715e;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata,
+.xml .php,
+.php .xml {
+  opacity: 0.5;
+}

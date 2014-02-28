@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'THSarabunNew';
+    src: url('../fonts/thsarabunnew-webfont.eot');
+    src: url('../fonts/thsarabunnew-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/thsarabunnew-webfont.woff') format('woff'),
+         url('../fonts/thsarabunnew-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'THSarabunNew';
+    src: url('../fonts/thsarabunnew_bolditalic-webfont.eot');
+    src: url('../fonts/thsarabunnew_bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/thsarabunnew_bolditalic-webfont.woff') format('woff'),
+         url('../fonts/thsarabunnew_bolditalic-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'THSarabunNew';
+    src: url('../fonts/thsarabunnew_italic-webfont.eot');
+    src: url('../fonts/thsarabunnew_italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/thsarabunnew_italic-webfont.woff') format('woff'),
+         url('../fonts/thsarabunnew_italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'THSarabunNew';
+    src: url('../fonts/thsarabunnew_bold-webfont.eot');
+    src: url('../fonts/thsarabunnew_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/thsarabunnew_bold-webfont.woff') format('woff'),
+         url('../fonts/thsarabunnew_bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Monospace';
+    src: url('../fonts/monospace-webfont.eot');
+    src: url('../fonts/monospace-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/monospace-webfont.woff') format('woff'),
+         url('../fonts/monospace-webfont.ttf') format('truetype'),
+         url('../fonts/monospace-webfont.svg#monospaceregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BPmono';
+    src: url('../fonts/BPmono-webfont.eot');
+    src: url('../fonts/BPmono-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/BPmono-webfont.woff') format('woff'),
+         url('../fonts/BPmono-webfont.ttf') format('truetype'),
+         url('../fonts/BPmono-webfont.svg#bpmonoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BPmonoBold';
+    src: url('../fonts/BPmonoBold-webfont.eot');
+    src: url('../fonts/BPmonoBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/BPmonoBold-webfont.woff') format('woff'),
+         url('../fonts/BPmonoBold-webfont.ttf') format('truetype'),
+         url('../fonts/BPmonoBold-webfont.svg#bpmonobold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.thsarabunnew{
+   font-family: 'THSarabunNew', sans-serif;
+}
