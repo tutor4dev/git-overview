@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>tutor4dev - Workshop</title>
+		<title>tutor4dev - Class Workshop 1 March 2014</title>
 
 		<meta http-equiv="Content-Language" content="th">
 	<meta http-equiv="content-Type" content="text/html; charset=utf-8"> 
@@ -34,14 +34,6 @@
 <h3 id="gist">Gist</h3>
 <p><img src="https://github-images.s3.amazonaws.com/help/gist/gist_history.png" alt=""></p>
 <p><a href="https://gist.github.com">Gist</a> เป็น Service ภายใต้ <a href="https://github.com">GitHub</a> ให้บริการแชร์ Code Snippet สนับสนุน Version Control System และมีฟังชั่นรองรับให้นักพัฒนาที่ไม่ใช่เจ้าของ Code Snippest สามารถมีส่วนร่วมในการแก้ไขเพิ่มเติมเพื่อให้ Code Snippest ดังกล่าวมีความสมบูรณ์ยิ่งขึ้น</p>
-<h4 id="-vcs">วัตถุประสงค์ในการใช้ VCS</h4>
-<ul>
-<li>เพื่อพัฒนาโปรเจคอย่างมีระบบ</li>
-<li>VCS ช่วยในการ Track การพัฒนาโปรเจค</li>
-<li>VCS ช่วยในการ Track Who, What, When, Where, Why</li>
-<li>นำ History จากการ Track มาใช้ในการบริหารจัดการโปรเจค</li>
-<li>สำรองข้อมูล</li>
-</ul>
 <h4 id="-">กิจวัตรประจำวันของนักพัฒนา</h4>
 <ul>
 <li>สร้างโปรเจค</li>
@@ -52,6 +44,13 @@
 <li>รีวิว, แก้บั๊ก</li>
 <li>แก้ไข &amp; จัดเก็บ</li>
 </ul>
+<h4 id="-vcs">วัตถุประสงค์ในการใช้ VCS</h4>
+<ul>
+<li>เพื่อพัฒนาโปรเจคอย่างมีระบบ</li>
+<li>VCS ช่วยในการ Track การพัฒนาโปรเจค</li>
+<li>นำ History จากการ Track มาใช้ในการบริหารจัดการโปรเจค</li>
+<li>สำรองข้อมูล</li>
+</ul>
 <h4 id="-git">จุดเด่นของ Git</h4>
 <ul>
 <li>ฟรี</li>
@@ -59,7 +58,7 @@
 <li>รองรับทุกภาษาในการพัฒนาโปรแกรม</li>
 <li>เร็ว, เล็ก, ไม่กินทรัพยากรของระบบ</li>
 <li>ทำงานได้ทั้งแบบ Offline/Online (Distrubuted)</li>
-<li>เป็นที่นิยม<strong>ที่สุด</strong></li>
+<li>เป็นที่นิยมในวงการโอเพ่นซ้อส</li>
 </ul>
 <h4 id="-git-">ใครใช้ Git บ้าง ?</h4>
 <ul>
@@ -171,15 +170,36 @@ git log --oneline
 <p>ดู Demo จากผู้บรรยาย</p>
 <h4 id="upload-">Upload โปรเจค</h4>
 <pre><code>#add ข้อมูลของ Repo เข้าตัวแปรชื่อ origin
-git remote add origin https://github.com/user/repo_name.git
+git remote add origin https://github.com/username/repo_name.git
 
 #Upload โปรเจคไปยัง GitHub.com
-git push -u origin master    
+git push -u origin master
+</code></pre><h4 id="-github-repo">แก้ไขโปรเจค และ อัพเดท GitHub Repo</h4>
+<pre><code>#แก้ไขไฟล์ในโปรเจค
+
+#Commit โปรเจค
+git add .
+git commit -m &quot;Make some edit&quot;
+
+#อัพเดท GitHub Repo
+git push origin master
+</code></pre><h4 id="-static-site-github-io">สร้าง Static Site ด้วย github.io</h4>
+<p>github.com มีบริการ Free Static Site Hosting โดย GitHub จะทำการเชื่อมโยงเข้ากับ Repo ชื่อ <em>username.github.io</em> โดยอัตโนมัติ ซึ่งผู้ใช้บริการสามารถมี Static Site ได้เพียง 1 Site ต่อ 1 บัญชีผู้ใช้เท่านั้น</p>
+<pre><code>#สร้าง Repo ชื่อ username.github.io
+
+#add ข้อมูลของ Repo เข้าตัวแปรชื่อ origin
+git remote add origin https://github.com/username/username.github.io.git
+
+#Upload โปรเจคไปยัง GitHub.com
+git push -u origin master
+
+#การ Upload ครั้งแรกต้องใช้เวลาประมาณ 10 นาที กว่า Site จะ Active
 </code></pre><h3 id="-git">คำสั่งพื้นฐานอื่นๆ ของ Git</h3>
 <h4 id="-git-tag">คำสั่ง git tag</h4>
 <p>ใช้ในการกำหนดเลขเวอร์ชั่นเพื่ออ้างอิง Commit</p>
 <pre><code>#สร้าง tag ให้กับ Commit ปัจจุบัน
 git tag 0.9.9
+
 #สร้าง tag ให้กับ Commit ที่ต้องการ
 git tag @hash
 </code></pre><h4 id="-git-diff">คำสั่ง git diff</h4>
@@ -225,7 +245,7 @@ git add .gitignore
 #Commit
 git commit -m &quot;Add .gitignore&quot;
 </code></pre><h4 id="-commit-unstaged-">ยกเลิกก่อนการ Commit (Unstaged)</h4>
-<p>เป็นคำสั่ง<strong><em>อันตราย</em></strong> เพราะ Git จะยกเลิกการแก้ไขไฟล์ทั้งหมด</p>
+<p>เป็นคำสั่ง <strong><em>อันตราย</em></strong> เพราะ Git จะยกเลิกการแก้ไขไฟล์ทั้งหมด</p>
 <pre><code>#ยกเลิกทั้งหมด
 git checkout .
 
@@ -238,10 +258,10 @@ git reset --mixed HEAD^
 #ยกเลิก Commit โดยทิ้งข้อมูล (คำสั่งอันตราย)
 git reset --hard HEAD^
 </code></pre><h2 id="chapter-4-branch-">Chapter 4 - แตกสาขาการพัฒนา (Branch)</h2>
-<p>Branch คือ Separate Workspace สำหรับการพัฒนาโปรเจค</p>
+<p>Branch คือ Separate Working Directory สำหรับการพัฒนาโปรเจค</p>
 <h3 id="-branch-">วัตถุประสงค์ของการใช้งาน Branch ?</h3>
 <ul>
-<li>แก้ไขบั๊กของโปรเจค</li>
+<li>แก้ไข bug ของโปรเจค</li>
 <li>ทดลองคุณสมบัติใหม่ๆ ให้กับโปรเจค</li>
 <li>แยกเวอร์ชั่น <em>dev</em> ออกจาก <em>stable</em> เวอร์ชั่น</li>
 <li>พัฒนาโปรเจคในแบบทีม</li>
